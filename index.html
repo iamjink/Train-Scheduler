@@ -40,31 +40,29 @@
 
     <!-- Current Train Schedule-->
     <div class="row">
-      <div class="col-md-12" id="schedule-table">
+      <div class="col-xs-12 col-sm-9" id="schedule-table">
         <div class="card mb-4" id="current-train-schedule">
           <div class="card-header" id="header">CURRENT TRAIN SCHEDULE</div>
           <div class="card-body" id="dynamic-table">
-            <table class="table table-sm table-hover" id='train-table'>
-              <thead>
-                <tr id='train-table'>
-                  <th scope="col" id="table-element">TRAIN NAME</th>
-                  <th scope="col" id="table-element">DESTINATION</th>
-                  <th scope="col" id="table-element">FREQUENCY (min)</th>
-                  <th scope="col" id="table-element">NEXT ARRIVAL</th>
-                  <th scope="col" id="table-element">MINUTES AWAY</th>
-                </tr>
-              </thead>
+            <table class="table table-sm table-hover" id="train-schedule-table">
+
+              <tr id='train-table'>
+                <th scope="col" id="table-element">TRAIN NAME</th>
+                <th scope="col" id="table-element">DESTINATION</th>
+                <th scope="col" id="table-element">FREQUENCY (min)</th>
+                <th scope="col" id="table-element">NEXT ARRIVAL</th>
+                <th scope="col" id="table-element">MINUTES AWAY</th>
+              </tr>
+
+
               <tbody>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Entry Form -->
-    <div class="row">
-      <div class="col-md-12">
+      <!-- Entry Form -->
+      <div class="col-xs-12 col-sm-3">
         <!-- Add Train  -->
         <div class="card mb-4" id="input-table">
           <div class="card-header" id="input-train">ADD TRAIN</div>
@@ -72,20 +70,20 @@
 
             <form>
               <div class="form-group">
-                <label for="employee-name-input" id="trainName">TRAIN NAME</label>
-                <input class="form-control" id="employee-name-input" placeholder="Trenton Express" type="text">
+                <label for="train-input" id="trainName">TRAIN NAME</label>
+                <input class="form-control" id="train-input" placeholder="Trenton Express" type="text">
               </div>
               <div class="form-group">
-                <label for="role-input" id="destination">DESTINATION</label>
-                <input class="form-control" id="role-input" placeholder="Trenton" type="text">
+                <label for="destination-input" id="destination">DESTINATION</label>
+                <input class="form-control" id="destination-input" placeholder="Trenton" type="text">
               </div>
               <div class="form-group">
-                <label for="start-input" id="firsttime">FIRST TRAIN TIME (HH:mm - military time)</label>
-                <input class="form-control" id="start-input" placeholder="05:35 pm" type="text">
+                <label for="time-input" id="firsttime">FIRST TRAIN TIME (HH:mm - military time)</label>
+                <input class="form-control" id="time-input" placeholder="05:35" type="time">
               </div>
               <div class="form-group">
-                <label for="rate-input" id="frequency">FREQUENCY(min)</label>
-                <input class="form-control" id="rate-input" placeholder="25" type="text">
+                <label for="frequency-input" id="frequency">FREQUENCY(min)</label>
+                <input class="form-control" id="frequency-input" placeholder="25" type="text">
               </div>
               <button class="btn btn-primary float-right" id="add-train-btn">SUBMIT</button>
             </form>

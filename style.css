@@ -27,6 +27,14 @@ body {
 }
 
 /* current train schedule form */
+#train-schedule-table {
+	border-radius: 0;
+	border-top: none;
+	color: #fadb9b;
+	width: 100%;
+}
+
+
 #current-train-schedule {
 	border-radius: 0;
 }
@@ -48,7 +56,6 @@ body {
 
 #table-element {
 	border: none;
-	/* border-bottom: 1px solid #a19fa5; */
 	background-color: #361452;
 }
 
@@ -58,8 +65,6 @@ body {
 	font-size: 20px;
 	color: #81759d;
 	border-radius: 0;
-
-	/* text-align: center; */
 }
 
 #dynamic-table {
