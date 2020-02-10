@@ -29,7 +29,7 @@ body {
 /* current train schedule form */
 #train-schedule-table {
 	border-radius: 0;
-	border-top: none;
+	border: none;
 	color: #fadb9b;
 	width: 100%;
 }
@@ -73,9 +73,9 @@ body {
 
 #train-table {
 	color: #44ffd4;
-	font-weight: 100;
+	font-weight: 90;
 	text-align: center;
-	font-size: 17px;
+	font-size: 15px;
 	border: none;
 }
 

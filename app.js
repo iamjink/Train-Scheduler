@@ -31,12 +31,10 @@ $(document).ready(function () {
     var destination = $("#destination-input")
       .val()
       .trim();
-    var firstTime = moment(
-      $("#time-input")
+    var firstTime = $("#time-input")
       .val()
-      .trim(),
-      "MM/DD/YYYY"
-    ).format("hh:mm");
+      .trim();
+
     var frequency = $("#frequency-input")
       .val()
       .trim();
@@ -46,7 +44,7 @@ $(document).ready(function () {
       trainName: trainName,
       destination: destination,
       firstTime: firstTime,
-      frequency: frequency
+      frequency: frequency,
     };
 
 
@@ -87,7 +85,7 @@ $(document).ready(function () {
 
 
    // First Time (pushed back 1 year to make sure it comes before current time)
-   var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+   var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
    console.log(firstTimeConverted);
 
    // Current Time
@@ -108,19 +106,19 @@ $(document).ready(function () {
 
    // Next Train
    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-   console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+   console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"));
 
     // Create the new row
     var newRow = $("<tr>").append(
       $("<td>").text(trainName),
       $("<td>").text(destination),
       $("<td>").text(frequency),
-      $("<td>").text(nextTrain),
+      $("<td>").text(nextTrain.format("LT")),
       $("<td>").text(tMinutesTillTrain),
     );
 
     // Append the new row to the table
-    $("#train-schedule-table > tbody").append(newRow);
+    $("#newTrainRow").append(newRow);
   });
 
 
