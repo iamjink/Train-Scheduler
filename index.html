@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Midnight Express Train Schedule</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap" rel="stylesheet">
+
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="jumbotron" id="header-top">
+      <h1 id="title">Midnight Train Schedule</h1>
+      <br>
+      <span class="text-center" id="subtitle">Directory of Train Time</span>
+    </div>
+
+    <!-- Current Train Schedule-->
+    <div class="row">
+      <div class="col-md-12" id="schedule-table">
+        <div class="card mb-4" id="current-train-schedule">
+          <div class="card-header" id="header">CURRENT TRAIN SCHEDULE</div>
+          <div class="card-body" id="dynamic-table">
+            <table class="table table-sm table-hover" id='train-table'>
+              <thead>
+                <tr id='train-table'>
+                  <th scope="col" id="table-element">TRAIN NAME</th>
+                  <th scope="col" id="table-element">DESTINATION</th>
+                  <th scope="col" id="table-element">FREQUENCY (min)</th>
+                  <th scope="col" id="table-element">NEXT ARRIVAL</th>
+                  <th scope="col" id="table-element">MINUTES AWAY</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry Form -->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add Train  -->
+        <div class="card mb-4" id="input-table">
+          <div class="card-header" id="input-train">ADD TRAIN</div>
+          <div class="card-body" id="user-form">
+
+            <form>
+              <div class="form-group">
+                <label for="employee-name-input" id="trainName">TRAIN NAME</label>
+                <input class="form-control" id="employee-name-input" placeholder="Trenton Express" type="text">
+              </div>
+              <div class="form-group">
+                <label for="role-input" id="destination">DESTINATION</label>
+                <input class="form-control" id="role-input" placeholder="Trenton" type="text">
+              </div>
+              <div class="form-group">
+                <label for="start-input" id="firsttime">FIRST TRAIN TIME (HH:mm - military time)</label>
+                <input class="form-control" id="start-input" placeholder="05:35 pm" type="text">
+              </div>
+              <div class="form-group">
+                <label for="rate-input" id="frequency">FREQUENCY(min)</label>
+                <input class="form-control" id="rate-input" placeholder="25" type="text">
+              </div>
+              <button class="btn btn-primary float-right" id="add-train-btn">SUBMIT</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer" class="text-center">Train Schedule Form</div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>

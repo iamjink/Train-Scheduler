@@ -1,0 +1,135 @@
+body {
+	background-color: #1c1429;
+	margin-top: 0;
+}
+
+/* header */
+
+#header-top {
+	border-radius: 0;
+}
+
+#title {
+	font-size: 72px;
+	color: #81759d;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	letter-spacing: -3px;
+}
+
+#subtitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 90;
+	letter-spacing: 15px;
+	color: #e5dcef;
+	opacity: 20%;
+}
+
+/* current train schedule form */
+#current-train-schedule {
+	border-radius: 0;
+}
+
+.text-center {
+	color: #423457;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.jumbotron {
+	background-color: #140b1e;
+	text-align: center;
+}
+
+#current-train-schedule {
+	border: none;
+}
+
+#table-element {
+	border: none;
+	/* border-bottom: 1px solid #a19fa5; */
+	background-color: #361452;
+}
+
+#header {
+	background-color: #140b1e;
+	font-weight: 700;
+	font-size: 20px;
+	color: #81759d;
+	border-radius: 0;
+
+	/* text-align: center; */
+}
+
+#dynamic-table {
+	background-color: #221438;
+}
+
+#train-table {
+	color: #44ffd4;
+	font-weight: 100;
+	text-align: center;
+	font-size: 17px;
+	border: none;
+}
+
+th {
+	border: none;
+}
+
+/* user train input form */
+#input-table {
+	border: none;
+}
+
+#input-train {
+	font-weight: 700;
+	font-size: 20px;
+	color: #81759d;
+	background-color: #140b1e;
+	border-radius: 0;
+}
+
+#user-form {
+	background-color: #221438;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 13px;
+	color: #c2bbcd;
+}
+
+#trainName {
+	color: #fadb9b;
+}
+
+#destination {
+	color: #f6a48c;
+}
+
+#firsttime {
+	color: #c5439d;
+}
+
+#frequency {
+	color: #2fc2a0;
+}
+
+/* submit button */
+#add-train-btn {
+	background-color: #423457;
+	border: none;
+	font-weight: 700;
+	font-size: 15px;
+	color: #81759d;
+}
+
+#train-table {
+	border-radius: 0;
+}
+
+#employee-table th,
+td {
+	display: inline-block;
+	width: 16.575%;
+}
