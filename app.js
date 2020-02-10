@@ -20,6 +20,10 @@ $(document).ready(function () {
 
   var database = firebase.database();
 
+  $('.form-control').keyup(function() {
+    $(this).val($(this).val().toUpperCase());
+  });
+
   //Button for train on submit
   $("#add-train-btn").on("click", function (event) {
     event.preventDefault();
@@ -114,8 +118,11 @@ $(document).ready(function () {
       $("<td id='destination'>").text(destination),
       $("<td id='firsttime'>").text(frequency),
       $("<td id='frequency'>").text(nextTrain.format("LT")),
-      $("<td id='trainName'>").text(tMinutesTillTrain)
+      $("<td id='trainName'>").text(tMinutesTillTrain),
+      
     );
+    
+    
 
     // Append the new row to the table
     $("#newTrainRow").append(newRow);

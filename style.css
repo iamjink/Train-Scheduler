@@ -4,9 +4,7 @@ body {
 	background-image: url("assets/Asset\ 1@4x_lowOpacity.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-
 }
-
 
 /* header */
 
@@ -61,6 +59,8 @@ body {
 #table-element {
 	border: none;
 	background-color: #361452;
+	padding-top: 5px;
+	padding-bottom: 7px;
 }
 
 #header {
@@ -87,7 +87,7 @@ body {
 	border: none;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
-	width: 900px;
+	font-size: 14px;
 }
 
 th {
