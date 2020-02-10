@@ -1,7 +1,12 @@
 body {
 	background-color: #1c1429;
 	margin-top: 0;
+	background-image: url("assets/Asset\ 1@4x_lowOpacity.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
+
 
 /* header */
 
@@ -13,7 +18,7 @@ body {
 	font-size: 72px;
 	color: #81759d;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 800;
+	font-weight: 900;
 	letter-spacing: -3px;
 }
 
@@ -23,7 +28,7 @@ body {
 	font-weight: 90;
 	letter-spacing: 15px;
 	color: #e5dcef;
-	opacity: 20%;
+	opacity: 40%;
 }
 
 /* current train schedule form */
@@ -33,7 +38,6 @@ body {
 	color: #fadb9b;
 	width: 100%;
 }
-
 
 #current-train-schedule {
 	border-radius: 0;
@@ -77,6 +81,13 @@ body {
 	text-align: center;
 	font-size: 15px;
 	border: none;
+}
+
+#newTrainRow tr {
+	border: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	width: 900px;
 }
 
 th {
@@ -133,8 +144,12 @@ th {
 	border-radius: 0;
 }
 
-#employee-table th,
-td {
-	display: inline-block;
-	width: 16.575%;
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	background-color: #140b1e;
+	font-size: 10px;
+	margin-top: 2px;
 }

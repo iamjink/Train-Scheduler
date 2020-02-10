@@ -84,37 +84,37 @@ $(document).ready(function () {
     console.log(frequency);
 
 
-   // First Time (pushed back 1 year to make sure it comes before current time)
-   var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
-   console.log(firstTimeConverted);
+    // First Time (pushed back 1 year to make sure it comes before current time)
+    var firstTimeConverted = moment(firstTime, "hh:mm").subtract(1, "years");
+    console.log(firstTimeConverted);
 
-   // Current Time
-   var currentTime = moment();
-   console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+    // Current Time
+    var currentTime = moment();
+    console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
 
-   // Difference between the times
-   var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-   console.log("DIFFERENCE IN TIME: " + diffTime);
+    // Difference between the times
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
 
-   // Time apart (remainder)
-   var tRemainder = diffTime % frequency;
-   console.log(tRemainder);
+    // Time apart (remainder)
+    var tRemainder = diffTime % frequency;
+    console.log(tRemainder);
 
-   // Minute Until Train
-   var tMinutesTillTrain = frequency - tRemainder;
-   console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    // Minute Until Train
+    var tMinutesTillTrain = frequency - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
-   // Next Train
-   var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-   console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"));
+    // Next Train
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"));
 
     // Create the new row
-    var newRow = $("<tr>").append(
-      $("<td>").text(trainName),
-      $("<td>").text(destination),
-      $("<td>").text(frequency),
-      $("<td>").text(nextTrain.format("LT")),
-      $("<td>").text(tMinutesTillTrain),
+    var newRow = $("<tr id='train-table'>").append(
+      $("<td id='trainName'>").text(trainName),
+      $("<td id='destination'>").text(destination),
+      $("<td id='firsttime'>").text(frequency),
+      $("<td id='frequency'>").text(nextTrain.format("LT")),
+      $("<td id='trainName'>").text(tMinutesTillTrain)
     );
 
     // Append the new row to the table
